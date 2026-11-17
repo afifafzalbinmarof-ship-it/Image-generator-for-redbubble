@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Autonomous print-on-demand production and SEO workspace.">
+  <title>Inkline — POD Production Agent</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="masthead">
+    <a class="brand" href="/" aria-label="Inkline POD Operations home">
+      <span class="brand-mark">I/L</span>
+      <span><b>INKLINE</b><small>POD OPERATIONS</small></span>
+    </a>
+    <div class="system-state"><span class="pulse"></span><span id="healthText">Connecting</span></div>
+    <p class="edition">MuleRun workspace<br><b>Production build 01</b></p>
+  </header>
+
+  <main class="shell">
+    <aside class="brief-panel">
+      <div class="section-kicker">New production brief</div>
+      <h1>From niche signal<br>to press-ready files.</h1>
+      <p class="lede">Research, art generation, edge cleanup, SEO screening, and 300&nbsp;DPI validation in one supervised run.</p>
+
+      <form id="jobForm" class="brief-form">
+        <label for="niche">Niche direction</label>
+        <textarea id="niche" name="niche" minlength="3" maxlength="90" required>garden pollinators</textarea>
+        <p class="field-note">Describe a subject cluster, not a protected character, brand, celebrity, team, or slogan.</p>
+
+        <div class="form-row">
+          <div>
+            <label for="count">Designs</label>
+            <select id="count" name="count">
+              <option value="1">01</option>
+              <option value="2">02</option>
+              <option value="3" selected>03</option>
+              <option value="4">04</option>
+            </select>
+          </div>
+          <div>
+            <label for="style">Print language</label>
+            <select id="style" name="style">
+              <option value="linocut">Vintage linocut</option>
+              <option value="woodblock">Rustic woodblock</option>
+              <option value="sticker">Die-cut sticker</option>
+            </select>
+          </div>
+        </div>
+
+        <button class="run-button" type="submit">
+          <span>Run production agent</span><span aria-hidden="true">↗</span>
+        </button>
+        <p id="formMessage" class="form-message" role="status"></p>
+      </form>
+
+      <div class="guardrails">
+        <span>HUMAN GATE</span>
+        <p>Uploads are never submitted automatically. Final artwork, metadata, and product placement require review.</p>
+      </div>
+    </aside>
+
+    <section class="workspace">
+      <div class="workspace-head">
+        <div>
+          <div class="section-kicker">Live production ledger</div>
+          <h2>Batch workspace</h2>
+        </div>
+        <div class="summary-strip" aria-label="Job summary">
+          <span><b id="jobCount">0</b> batches</span>
+          <span><b id="assetCount">0</b> verified files</span>
+        </div>
+      </div>
+
+      <div class="pipeline-key" aria-label="Pipeline stages">
+        <span>01 Research</span><i></i><span>02 Generate</span><i></i><span>03 Process</span><i></i><span>04 Verify</span>
+      </div>
+
+      <div id="jobs" class="jobs" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <section class="policy-band">
+    <div><span class="policy-number">4500×5400</span><small>PIXEL CANVAS</small></div>
+    <div><span class="policy-number">300</span><small>DPI OUTPUT</small></div>
+    <div><span class="policy-number">15</span><small>DISTINCT TAGS</small></div>
+    <p>Opportunity scores compare capped marketplace-index results and title overlap. They are directional research signals, not sales forecasts or legal clearance.</p>
+  </section>
+
+  <dialog id="jobDialog" class="job-dialog">
+    <button id="closeDialog" class="dialog-close" aria-label="Close">×</button>
+    <div id="dialogBody"></div>
+  </dialog>
+
+  <template id="emptyTemplate">
+    <div class="empty-state">
+      <span>NO ACTIVE RUNS</span>
+      <h3>Your production ledger is clear.</h3>
+      <p>Submit a brief to start market research and asset production.</p>
+    </div>
+  </template>
+  <script src="/app.js" defer></script>
+</body>
+</html>
